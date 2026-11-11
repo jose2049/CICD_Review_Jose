@@ -25,4 +25,6 @@ public class Room {
     private Integer Attendee_count;
     private String bookingStatus = "ACTIVE";
     private Integer room;
+
+
 }
