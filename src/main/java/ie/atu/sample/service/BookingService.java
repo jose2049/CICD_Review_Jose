@@ -22,12 +22,6 @@ public class BookingService {
     }
 
     public Booking CreateBookingRequest(CreateBookingRequest bookingRequest) {
-        if(bookingRequest.name() == null){
-            throw new RuntimeException("booking name is null");
-        }
-        if(bookingRequest.Attendee_count() > 0){ // || bookingRequest.email() > '0'){
-            throw new RuntimeException("booking email is null");
-        }
         //Creating Booking
         Booking booking = new Booking();
         booking.setName(bookingRequest.name());
