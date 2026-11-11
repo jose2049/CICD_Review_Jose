@@ -1,6 +1,7 @@
 package ie.atu.sample.dto;
 
 public record BookingStatus(
-        String bookingStatus
+        Long bookingId,
+        Long roomID
 ) {
 }

@@ -1,5 +1,6 @@
 package ie.atu.sample.service;
 
+import ie.atu.sample.dto.BookingStatus;
 import ie.atu.sample.dto.CreateBookingRequest;
 import ie.atu.sample.model.Booking;
 import ie.atu.sample.model.Room;
@@ -31,6 +32,12 @@ public class BookingService {
         return bookingRepository.save(booking);
 
     }
+    //Retriving data to the client
+    /*public BookingStatus GetBookingStatus(Long bookingId, Long roomId) {
+        Booking booking = bookingRepository.findById(bookingId).orElse(null);
+        Room roomid = roomRepository.findById(roomId).orElse(null);
+        return 0;
+    }*/
     public List<Booking> GetBookingId(Booking bookings){
         return bookingRepository.findAll();
     }
