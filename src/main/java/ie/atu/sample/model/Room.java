@@ -12,17 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Room {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-    @NotBlank
-    @Min(2) @Max(60)
+
     private String name;
-    @Positive
-    @Min(1) @Max(60)
-    private Integer Attendee_count;
-    private String bookingStatus = "ACTIVE";
-    private Integer room;
+    private int capacity;
 }

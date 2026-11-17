@@ -42,11 +42,15 @@ Start from a **fresh copy of the starter template for your own exam group**, in 
 
 Describe **two or three important problems** in your original code. For each, explain what was wrong, which class or method you changed in the new project, and why the corrected approach works.
 
-**Problem and correction 1:**  
+**Problem and correction 1: Validation. I just didn't use the proper validations annotations for the requirements. **  
 
-**Problem and correction 2:**  
+**Problem and correction 2: How to use the DTOs to receive and return the info I want. And the difference between using 
+and object and a DTO. I didn't know that I had to use an instance of BookingService to access the methods of the service
+layers on my Controller layer**  
 
-**Problem and correction 3 (optional):**  
+**Problem and correction 3 (optional): How to access information. This was tricky because I don't really understand the 
+code to access the info I want to. I may understand what I want to have access to but I'm just unable to write code by 
+myself and access to the database and retrieve the data. **  
 
 ## 3. API testing and evidence
 
@@ -56,19 +60,19 @@ Use Swagger UI or another HTTP client. For **at least four meaningful checks**, 
 - Request / input:  
 - Expected:  
 - Actual HTTP status / body:  
-- Pass / fail:  
+- Pass  
 
 **Test 2 — invalid input or excessive attendee count:**  
 - Request / input:  
 - Expected:  
 - Actual HTTP status / body:  
-- Pass / fail:  
+- Partial pass. It does give an error, but it doesn't specify the type of error
 
 **Test 3 — missing booking or room:**  
 - Request / input:  
 - Expected:  
 - Actual HTTP status / body:  
-- Pass / fail:  
+- Pass It does give an error, but it doesn't specify the type of error
 
 **Test 4 — requirement specific to my group:**  
 - Request / input:  
@@ -78,15 +82,26 @@ Use Swagger UI or another HTTP client. For **at least four meaningful checks**, 
 
 **Group A:** Demonstrate `GET /api/bookings/search?roomName=...` using an exact room name, bookings ordered by attendee count descending, and an empty list for no matches. Add checks if necessary to show all three behaviours.
 
-**Group B:** Run the **provided** Room Service separately on port 8082 and the **new** Booking Service on port 8081. Demonstrate that booking creation obtains room details through OpenFeign and that booking retrieval uses the local Booking database. Do not modify the Room Service.
-
 ## 4. Reflection
 
-**What did I understand during the examination but struggle to implement?**  
+**What did I understand during the examination but struggle to implement?**
+**I understood that I needed to make bookings. The specific data to ask from the client and how it should look like when
+the booking is made (Response body)**
+**Now I saw that I also needed to make a query to join two tables and get the name from the room table and return
+a list with all the booking associated to that room**
 
 **Which Spring Boot, JPA, validation, JPQL or OpenFeign concept became clearer after correcting my code? Give a specific example.**  
-
-**What will I do differently in my next coding test or API development task?**  
+** I think the use of validation annotations became clearer. The use of DTO as well, but I still struggling why do I need
+an object to access to a function call, why I cannot just call the function? From JPA I just learned that ON means ==.
+But the how to read any query still hard for me to understand**
+**What will I do differently in my next coding test or API development task?** 
+**Practice. While I was doing this task I found so many gaps in my mind on how things work because I thought by knowing the
+big picture would be enough. But simple things such as an object, entity, field, constructors I just forgot what they 
+mean and how they work together. I also relly so much on AI. Because in the lab we get the code and the AI assistance 
+completes the lines I am typing and gives the sense of "I know what I am doing" but without it, I don't. And when things 
+are not working, or I get a bug I just throw the error to ChatGPT to fix and I just don't bother why it was giving the
+error and why is the solution it suggests is valid. Let's say that I don't bother to understand or comprehend how things 
+work. I definitely need to slow down and learn how to read the code, comprehend it and practice**
 
 ## Review lab assessment — 20 marks
 

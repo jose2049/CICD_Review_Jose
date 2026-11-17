@@ -16,8 +16,8 @@ public class RoomController {
         this.roomRepository = roomRepository;
     }
 
-    @GetMapping
-    public List<Room> getRooms() {
+    /*@GetMapping("/roomName")
+    public List<Room> GetName(@RequestParam String name) {
         return roomRepository.findAll();
-    }
+    }*/
 }
